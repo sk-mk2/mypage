@@ -2,7 +2,10 @@
 
 ## 使っているもの
 - Firebase
-- Node.js
-- Vue.js
+- Node
+- Vue
+- CircleCI
+- webpack
+- mocha
 
 [現時点はこうなっている](https://mypage-90953.firebaseapp.com)
