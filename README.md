@@ -1,6 +1,6 @@
 # mypage
 
-##使っているもの
+## 使っているもの
 - Firebase
 - Node.js
 - Vue.js
