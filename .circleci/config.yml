@@ -16,8 +16,6 @@ jobs:
 
     steps:
       - checkout
-      - run: cd hosting
-
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -26,8 +24,10 @@ jobs:
           - node-v1-{{ .Branch }}-
           - node-v1-
 
-      - run: ls
-      - run: npm install
+      - run: 
+          command: npm install \
+                   ls
+          working_directory: hosting
 
       - save_cache:
           paths:
