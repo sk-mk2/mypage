@@ -12,5 +12,6 @@
     - node_modulesのキャッシュができていない
 - webpack
 - mocha
+    - そもそも走ってない
 
 [現時点はこうなっている](https://mypage-90953.firebaseapp.com)
