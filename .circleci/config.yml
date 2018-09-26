@@ -26,6 +26,10 @@ jobs:
       - image: circleci/node:8.11
     steps:
       - checkout
+      # いらないと思うけど
+      - run: 
+          command: npm install eslint 
+          working_directory: hosting
       # run lint!
       - run: 
           command: npm run lint 
