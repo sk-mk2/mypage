@@ -35,7 +35,8 @@ jobs:
       - checkout
       # 
       #
-      run: firebase deploy --project "$FIREBASE_PJ" --token "$FIREBASE_TOKEN" 
+      - run: 
+          command: firebase deploy --project "$FIREBASE_PJ" --token "$FIREBASE_TOKEN" 
 
 workflows:
   version: 2
