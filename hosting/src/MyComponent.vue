@@ -1,5 +1,9 @@
 <template>
+  <div>
+  <h2>CI/CDできた</h2>
   <span>{{ message }}</span>
+  </div>
+  
 </template>
 
 <script>
