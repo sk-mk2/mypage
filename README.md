@@ -9,6 +9,7 @@
 - Vue
 - CircleCI
     - はやい
+    - node_modulesのキャッシュができていない
 - webpack
 - mocha
 
