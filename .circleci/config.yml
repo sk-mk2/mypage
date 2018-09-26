@@ -19,7 +19,7 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - node-v1-{{ .Branch }}-{{ checksum "hosting/package-lock.json" }}
+          - node-{{ .Branch }}-{{ checksum "hosting/package-lock.json" }}
 
       - run: 
           command: npm install 
@@ -27,8 +27,8 @@ jobs:
 
       - save_cache:
           paths:
-            - "hosting/node_modules"
-          key: node-v1-{{ .Branch }}-{{ checksum "hosting/package-lock.json" }}
+            - hosting/node_modules
+          key: node-{{ .Branch }}-{{ checksum "hosting/package-lock.json" }}
         
       # run lint!
       - run: 
