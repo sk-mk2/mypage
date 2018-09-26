@@ -1,0 +1,23 @@
+{
+  "name": "mypage",
+  "version": "1.0.0",
+  "description": "[![CircleCI](https://circleci.com/gh/sk-mk2/mypage/tree/master.svg?style=svg)](https://circleci.com/gh/sk-mk2/mypage/tree/master)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "firebase deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sk-mk2/mypage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sk-mk2/mypage/issues"
+  },
+  "homepage": "https://github.com/sk-mk2/mypage#readme",
+  "devDependencies": {
+    "firebase-tools": "^4.2.1"
+  }
+}
