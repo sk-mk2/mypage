@@ -27,7 +27,7 @@ jobs:
 
       - save_cache:
           paths:
-            - hosting/node_modules
+            - "hosting/node_modules"
           key: node-v1-{{ .Branch }}-{{ checksum "hosting/package-lock.json" }}
         
       # run lint!
