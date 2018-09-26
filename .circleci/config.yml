@@ -25,8 +25,7 @@ jobs:
           - node-v1-
 
       - run: 
-          command: npm install \
-                   ls
+          command: npm install 
           working_directory: hosting
 
       - save_cache:
