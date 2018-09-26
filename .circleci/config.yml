@@ -13,6 +13,9 @@ jobs:
 
       - run: 
           command: npm install 
+          working_directory: hosting
+      - run: 
+          command: npm install 
       # run lint!
       - run: 
           command: npm run lint 
