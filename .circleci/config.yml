@@ -1,19 +1,9 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:8.11
       
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
     steps:
       - checkout
       # Download and cache dependencies
@@ -30,7 +20,25 @@ jobs:
             - hosting/node_modules
           key: node-{{ .Branch }}-{{ checksum "hosting/package-lock.json" }}
         
+      
+  lint:
+    docker:
+      - image: circleci/node:8.11
+    steps:
+      - checkout
       # run lint!
       - run: 
           command: npm run lint 
           working_directory: hosting
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - lint:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
