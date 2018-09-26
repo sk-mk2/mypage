@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha-webpack test/test.js",
-    "build": "webpack"
+    "build": "webpack",
+    "lint" : "eslint src/**/*.js"
   },
   "author": "sk-mk2",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^1.0.0",
+    "eslint": "^5.6.0",
     "mocha": "^5.2.0",
     "mocha-webpack": "^1.1.0",
     "vue-loader": "^15.4.2",
