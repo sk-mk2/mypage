@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha-webpack test/test.js",
     "build": "webpack",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js",
+    "start": "webpack-dev-server"
   },
   "author": "sk-mk2",
   "license": "ISC",

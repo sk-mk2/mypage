@@ -11,7 +11,7 @@ module.exports =  {
     },
     mode: 'development',
     devServer:{
-        contentBase:'dist',
+        contentBase: path.resolve(__dirname, '../public'),
         open: true
     },
     resolve: {
