@@ -1,6 +1,6 @@
 <template>
   <div>
-  <h2>CI/CDできた</h2>
+  <h2>携帯からCI/CDできた</h2>
   <span>{{ message }}</span>
   </div>
   
