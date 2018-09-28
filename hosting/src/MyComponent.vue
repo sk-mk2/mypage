@@ -15,7 +15,9 @@
     },
     methods: {
         callFirebase: function () {
-            this.message = fetch('https://us-central1-mypage-90953.cloudfunctions.net/helloWorld')
+            this.message = fetch('https://us-central1-mypage-90953.cloudfunctions.net/helloWorld', {
+                mode: 'cors'
+            })
             .then((res) => {
                 return res;
             }).catch((err) => {
