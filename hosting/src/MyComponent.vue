@@ -16,7 +16,7 @@
     },
     methods: {
         callFirebase: function () {
-            this.message = fetch('https://mypage-90953.firebaseapp.com/api/helloWorld')
+            this.message = fetch('https://us-central1-mypage-90953.cloudfunctions.net/helloWorld')
             .then((res) => {
                 return res;
             }).catch((err) => {
