@@ -15,8 +15,8 @@
     },
     methods: {
         callFirebase: function () {
-            const url = 'https://us-central1-mypage-90953.cloudfunctions.net/helloWorld';
-            //const url = 'http://localhost:5000/mypage-90953/us-central1/helloWorld';
+            //const url = 'https://us-central1-mypage-90953.cloudfunctions.net/helloWorld';
+            const url = 'http://localhost:5000/mypage-90953/us-central1/api/count';
 
             fetch(url, {
                 mode: 'cors'
@@ -28,9 +28,8 @@
                 this.message = text;
             })
             .catch((err) => {
-                return err.text();
+                return err;
             });
-            console.log('called me');
         }
     }
   }
