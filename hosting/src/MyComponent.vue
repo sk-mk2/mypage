@@ -4,7 +4,6 @@
   <span>{{ message }}</span>
   <button v-on:click="callFirebase">Button</button>
   </div>
-  
 </template>
 
 <script>

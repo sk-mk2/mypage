@@ -127,7 +127,7 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n    data () {\n        return  {\n            message: 'hello!'\n        }\n    },\n    created () {\n        this.message = 'bye'\n    }\n});\n\n\n//# sourceURL=webpack:///./src/MyComponent.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data: () => {\n      return {\n          message: 'hello!'\n      }\n  },\n  methods: {\n      callFirebase: function () {\n          this.message = fetch('https://us-central1-mypage-90953.cloudfunctions.net/helloWorld')\n          .then((res) => {\n              return res;\n          }).catch((err) => {\n              return err;\n          });\n      }\n  }\n});\n\n\n//# sourceURL=webpack:///./src/MyComponent.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -139,7 +139,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", [\n    _c(\"h2\", [_vm._v(\"CI/CDできた\")]),\n    _vm._v(\" \"),\n    _c(\"span\", [_vm._v(_vm._s(_vm.message))])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/MyComponent.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"div\", [\n    _c(\"h2\", [_vm._v(\"携帯からCI/CDできた\")]),\n    _vm._v(\" \"),\n    _c(\"span\", [_vm._v(_vm._s(_vm.message))]),\n    _vm._v(\" \"),\n    _c(\"button\", { on: { click: _vm.callFirebase } }, [_vm._v(\"Button\")])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/MyComponent.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
