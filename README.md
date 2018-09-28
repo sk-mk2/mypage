@@ -10,6 +10,8 @@
         - Expressをつかえる
     - hosting
         - 反映遅い
+    - database
+        - 使いたい
 - Node
 - Vue
 - CircleCI

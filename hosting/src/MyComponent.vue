@@ -15,8 +15,9 @@
     },
     methods: {
         callFirebase: function () {
-            //const url = 'https://us-central1-mypage-90953.cloudfunctions.net/helloWorld';
-            const url = 'http://localhost:5000/mypage-90953/us-central1/api/count';
+            //URL書き換えなきゃ行けないのめんどくさい
+            const url = 'https://us-central1-mypage-90953.cloudfunctions.net/api/count';
+            //const url = 'http://localhost:5000/mypage-90953/us-central1/api/count';
 
             fetch(url, {
                 mode: 'cors'
