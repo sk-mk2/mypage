@@ -14,6 +14,7 @@
         - 使いたい
 - Node
 - Vue
+- Vuetify
 - CircleCI
     - はやい
     - node_modulesのキャッシュができていない
