@@ -29,8 +29,8 @@
     methods: {
         callFirebase: async function() {
             //URL書き換えなきゃ行けないのめんどくさい
-            //const url = 'https://us-central1-mypage-90953.cloudfunctions.net/api/count';
-            const url = 'http://localhost:5000/mypage-90953/us-central1/api/count';
+            const url = 'https://us-central1-mypage-90953.cloudfunctions.net/api/count';
+            //const url = 'http://localhost:5000/mypage-90953/us-central1/api/count';
             this.count = await myFetch(url);
         },
         getData: async function() {
