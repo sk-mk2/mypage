@@ -1,0 +1,27 @@
+[debug] [2018-09-28T07:56:37.512Z] ----------------------------------------------------------------------
+[debug] [2018-09-28T07:56:37.514Z] Command:       /opt/node-v9.11.1-linux-x64/bin/node /home/ubuntu/git/mypage/node_modules/.bin/firebase serve --only functions
+[debug] [2018-09-28T07:56:37.514Z] CLI Version:   4.2.1
+[debug] [2018-09-28T07:56:37.514Z] Platform:      linux
+[debug] [2018-09-28T07:56:37.514Z] Node Version:  v9.11.1
+[debug] [2018-09-28T07:56:37.514Z] Time:          Fri Sep 28 2018 16:56:37 GMT+0900 (JST)
+[debug] [2018-09-28T07:56:37.514Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-28T07:56:37.521Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-28T07:56:37.521Z] > authorizing via signed-in user
+[debug] [2018-09-28T07:56:37.523Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mypage-90953  
+ 
+[debug] [2018-09-28T07:56:38.267Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-28T07:56:38.269Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/mypage-90953  
+ 
+[debug] [2018-09-28T07:56:39.081Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/ubuntu/git/mypage'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-09-28T07:56:39.699Z] Fetching environment
+[debug] [2018-09-28T07:56:39.700Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/597953905780:getServerAppConfig  
+ 
+[debug] [2018-09-28T07:56:40.130Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-28T07:56:40.130Z] Starting @google-cloud/functions-emulator
+[debug] [2018-09-28T07:56:41.813Z] Parsing function triggers
+[info] ✔  functions: helloWorld: http://localhost:5000/mypage-90953/us-central1/helloWorld

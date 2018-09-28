@@ -15,14 +15,22 @@
     },
     methods: {
         callFirebase: function () {
-            this.message = fetch('https://us-central1-mypage-90953.cloudfunctions.net/helloWorld', {
+            const url = 'https://us-central1-mypage-90953.cloudfunctions.net/helloWorld';
+            //const url = 'http://localhost:5000/mypage-90953/us-central1/helloWorld';
+
+            fetch(url, {
                 mode: 'cors'
             })
             .then((res) => {
-                return res;
-            }).catch((err) => {
-                return err;
+                return res.text();
+            })
+            .then((text) => {
+                this.message = text;
+            })
+            .catch((err) => {
+                return err.text();
             });
+            console.log('called me');
         }
     }
   }

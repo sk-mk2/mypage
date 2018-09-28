@@ -127,7 +127,7 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data: () => {\n      return {\n          message: 'hello!'\n      }\n  },\n  methods: {\n      callFirebase: function () {\n          this.message = fetch('https://us-central1-mypage-90953.cloudfunctions.net/helloWorld', {\n              mode: 'cors'\n          })\n          .then((res) => {\n              return res;\n          }).catch((err) => {\n              return err;\n          });\n      }\n  }\n});\n\n\n//# sourceURL=webpack:///./src/MyComponent.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data: () => {\n      return {\n          message: 'hello!'\n      }\n  },\n  methods: {\n      callFirebase: function () {\n          //const url = 'https://us-central1-mypage-90953.cloudfunctions.net/helloWorld';\n          const url = 'http://localhost:5001/mypage-90953/us-central1/helloWorld';\n\n          this.message = fetch(url, {\n              mode: 'cors'\n          })\n          .then((res) => {\n              console.log(res);\n              return res;\n          }).catch((err) => {\n              console.log(err); \n              return err;\n          });\n          console.log('called me');\n      }\n  }\n});\n\n\n//# sourceURL=webpack:///./src/MyComponent.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
