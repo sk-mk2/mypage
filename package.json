@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sk-mk2/mypage#readme",
   "devDependencies": {
+    "eslint": "^5.6.0",
     "firebase-tools": "^4.2.1"
   }
 }
