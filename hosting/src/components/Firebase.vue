@@ -34,6 +34,7 @@
             this.count = await myFetch(url);
         },
         getData: async function() {
+            //Firebaseのデータベースからデータを持ってきたい
             this.databaseData = 'まだ実装できていないよ';
         }
     }

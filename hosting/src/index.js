@@ -3,7 +3,8 @@ import Firebase from './components/Firebase.vue';
 import Vuetify from 'vuetify';
 import "vuetify/dist/vuetify.min.css";
 import "material-design-icons/iconfont/material-icons.css";
-import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/css/all.css';
+import './css/style.css';
 Vue.use(Vuetify, {
     iconfont: 'fa'
 });
@@ -14,7 +15,7 @@ new Vue({
     },
     template: `
     <v-app >
-        <v-toolbar-title>sk-mk2の学習用ページ</v-toolbar-title>
+        <v-toolbar-title class="title">sk-mk2の学習用ページ</v-toolbar-title>
         <Firebase></Firebase>
         <v-footer>
             <a href="https://www.github.com/sk-mk2">

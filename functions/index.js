@@ -6,4 +6,7 @@ const app = express();
 app.use(cors);
 let pushCount = 1;
 app.get('/count', count);
+app.get('/getMemo', () => {
+
+});
 exports.api = functions.https.onRequest(app);
