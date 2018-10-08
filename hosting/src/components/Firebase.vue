@@ -1,5 +1,6 @@
 <template>
   <v-container grid-list-md text-xs-center>
+    うまくいかん
     <v-layout row justify-space-around>
     <v-flex>
     <v-card dark color="primary">
@@ -10,15 +11,19 @@
     <v-flex>
     <v-card dark color="primary">
     <v-card-text class="px-10">Let's get data from FirebaseRealtimeDatabase</v-card-text>
-    <v-btn color="grey darken-1" v-on:click="getData">{{ databaseData }}</v-btn>
+    <v-btn color="grey darken-1" v-on:click="getData">get db data</v-btn>
     </v-card>
     </v-flex>
     </v-layout>
+    {{ databaseData }}
   </v-container>
 </template>
 
 <script>
   import { myFetch } from '../util.js';
+
+  const baseUrl = 'https://us-central1-mypage-90953.cloudfunctions.net/api/';
+  //const baseUrl = 'http://localhost:5000/mypage-90953/us-central1/api/';
   export default {
     data: () => {
         return {
@@ -28,14 +33,13 @@
     },
     methods: {
         callFirebase: async function() {
-            //URL書き換えなきゃ行けないのめんどくさい
-            const url = 'https://us-central1-mypage-90953.cloudfunctions.net/api/count';
-            //const url = 'http://localhost:5000/mypage-90953/us-central1/api/count';
+            const url = baseUrl + 'count';
             this.count = await myFetch(url);
         },
         getData: async function() {
             //Firebaseのデータベースからデータを持ってきたい
-            this.databaseData = 'まだ実装できていないよ';
+            const url = baseUrl + 'memo';
+            this.databaseData = await myFetch(url);
         }
     }
   };

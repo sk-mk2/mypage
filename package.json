@@ -24,5 +24,9 @@
     "eslint-plugin-promise": "^4.0.1",
     "firebase-tools": "^4.2.1",
     "url-loader": "^1.1.1"
+  },
+  "dependencies": {
+    "firebase": "^5.5.3",
+    "firebase-functions": "^2.0.5"
   }
 }

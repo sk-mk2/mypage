@@ -12,6 +12,10 @@
         - 反映遅い
     - database
         - 使いたい
+        - NoSQL
+        - BoringSSL
+        - Spanner
+        - gRPC
 - Node
 - Vue
 - Vuetify
