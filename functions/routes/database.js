@@ -3,9 +3,10 @@ const functions = require('firebase-functions');
 require('firebase/firestore');
 //環境変数にしなきゃ
 //できなくね？
-console.log(functions.config().mypage);
+
+const ENV = functions.config().mypage || require('../env');
 firebase.initializeApp({
-  apiKey: functions.config().mypage.key,
+  apiKey: ENV.mypage.key,
   authDomain: 'mypage-90953.firebaseapp.com',
   projectId: 'mypage-90953'  
 });
