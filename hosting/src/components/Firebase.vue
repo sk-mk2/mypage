@@ -15,7 +15,9 @@
     </v-card>
     </v-flex>
     </v-layout>
-    {{ databaseData }}
+    <li v-for="(item) in  databaseData" v-bind:key="item.id">
+        {{ item }}
+    </li>
   </v-container>
 </template>
 
@@ -28,7 +30,7 @@
     data: () => {
         return {
             count: 'hello! push me!',
-            databaseData: 'get DB data'
+            databaseData: []
         }
     },
     methods: {
@@ -37,9 +39,8 @@
             this.count = await myFetch(url);
         },
         getData: async function() {
-            //Firebaseのデータベースからデータを持ってきたい
             const url = baseUrl + 'memo';
-            this.databaseData = await myFetch(url);
+            this.databaseData = JSON.parse(await myFetch(url));
         }
     }
   };

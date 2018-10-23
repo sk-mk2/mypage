@@ -1,10 +1,8 @@
 const firebase = require('firebase');
 const functions = require('firebase-functions');
 require('firebase/firestore');
-//環境変数にしなきゃ
-//できなくね？
 
-const ENV = functions.config().mypage || require('../env');
+const ENV = functions.config() || require('../env');
 firebase.initializeApp({
   apiKey: ENV.mypage.key,
   authDomain: 'mypage-90953.firebaseapp.com',
@@ -20,14 +18,15 @@ const settings = {
 db.settings(settings);
 
 //dbのデータ追加
-function addMemo(memoObj = {
-    hoge: 'fuga'
-}){
+function addMemo(req, res){
+    const memoObj = JSON.parse(req.body);
     db.collection('memos').add(memoObj).then((docRef) => {
         console.log(docRef);
+        res.send('insert success');
         return docRef;
     }).catch((err) => {
         console.error(err);
+        res.send('insert failed');
         return err;
     });
 }
@@ -35,7 +34,6 @@ function addMemo(memoObj = {
 
 //dbのデータ読み取り
 //クエリで絞り込みどうやる？
-//すぐ実行終わらないのはなんだ？
 function getMemos(req, res){
     db.collection('memos').get().then((querySnapshot) => {
         const memo = [];

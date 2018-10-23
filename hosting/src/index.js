@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Firebase from './components/Firebase.vue';
+import AddMemo from './components/AddMemo.vue';
 import Vuetify from 'vuetify';
 import "vuetify/dist/vuetify.min.css";
 import "material-design-icons/iconfont/material-icons.css";
@@ -17,6 +18,7 @@ new Vue({
     <v-app >
         <v-toolbar-title class="title">sk-mk2の学習用ページ</v-toolbar-title>
         <Firebase></Firebase>
+        <AddMemo></AddMemo>
         <v-footer>
             <a href="https://www.github.com/sk-mk2">
             <v-icon medium color="black">fab fa-github</v-icon>
@@ -25,6 +27,7 @@ new Vue({
     </v-app>
     `,
     components: {
-        Firebase
+        Firebase,
+        AddMemo
     }
 });

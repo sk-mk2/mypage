@@ -1,9 +1,10 @@
 import Vue from 'vue';
-const MyComponent = require('../src/MyComponent.vue');
+const FirebaseComponent = require('../src/components/Firebase.vue');
 const assert = require('assert');
 
-describe('MyComponent', () => {
+describe('Firebase', () => {
     it('has a created hook', () => {
-        expect(typeof MyComponent.created).toBe('function');
+        console.log(typeof FirebaseComponent.created);
+        expect(typeof FirebaseComponent.created).toBe('function');
     });
 })

@@ -26,7 +26,9 @@
     "webpack-dev-server": "^3.1.8"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.4.1",
     "material-design-icons": "^3.0.1",
+    "url-loader": "^1.1.2",
     "vue": "^2.5.17",
     "vuetify": "^1.2.5"
   }
