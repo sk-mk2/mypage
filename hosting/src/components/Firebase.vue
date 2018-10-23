@@ -1,6 +1,5 @@
 <template>
   <v-container grid-list-md text-xs-center>
-    うまくいかん
     <v-layout row justify-space-around>
     <v-flex>
     <v-card dark color="primary">
@@ -15,8 +14,9 @@
     </v-card>
     </v-flex>
     </v-layout>
+    ここテーブルにする
     <li v-for="(item) in  databaseData" v-bind:key="item.id">
-        {{ item }}
+        {{ Object.keys(item)[0] }}        {{ Object.values(item)[0] }}        
     </li>
   </v-container>
 </template>
@@ -36,7 +36,7 @@
     methods: {
         callFirebase: async function() {
             const url = baseUrl + 'count';
-            this.count = await myFetch(url);
+            this.count = JSON.parse(await myFetch(url)).pushCount;
         },
         getData: async function() {
             const url = baseUrl + 'memo';

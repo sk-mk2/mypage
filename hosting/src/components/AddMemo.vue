@@ -1,5 +1,6 @@
 <template>
   <v-container grid-list-md>
+      入力する場所作る
        <button v-on:click="addMemo" class="square_btn">Add Memo</button>
        {{ memo }}
   </v-container>
