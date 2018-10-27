@@ -25,6 +25,11 @@ module.exports =  {
                 test: /\.vue$/,
                 exclude: /node_modules/,
                 loader: 'vue-loader',
+                options: {
+                    loaders: {
+                        sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+                    }
+                }
             },
             {
                 test: /\.(png|jpg|gif)$/,
@@ -42,6 +47,15 @@ module.exports =  {
             {
                 test: /\.(woff|woff2|eot|ttf|svg)$/,
                 use: ["url-loader"]
+            },
+            {
+                test: /\.sass$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
+
             }
         ]
     },

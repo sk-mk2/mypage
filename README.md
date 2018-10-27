@@ -2,7 +2,7 @@
 
 # mypage
 
-## 使っているもの
+## technology
 - Firebase
     - 簡単
     - cloud functions
@@ -11,7 +11,6 @@
     - hosting
         - 反映遅い
     - database
-        - 使いたい
         - NoSQL
         - BoringSSL
         - Spanner
