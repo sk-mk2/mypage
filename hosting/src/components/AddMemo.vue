@@ -1,8 +1,10 @@
 <template>
   <v-container grid-list-md>
-      入力する場所作る
+       NAME:<input v-model="name" class="input">
+       MEMO:<textarea v-model="memo" class="input" placeholder="メモ欄" rows="4" cols="40"></textarea>
        <button v-on:click="addMemo" class="square_btn">Add Memo</button>
-       {{ memo }}
+       <p> {{ name }}:{{ memo }}を送ります </p>
+       <p> {{ info }} </p>
   </v-container>
 </template>
 
@@ -14,20 +16,29 @@
   export default {
     data: () => {
         return {
-            memo: ''
+            name:'',
+            memo:'',
+            info:''
         }
     },
     methods: {
         addMemo: async function() {
             const url = baseUrl + 'memo';
-            this.memo = {fukuda: 'atsushi'}
             const options = {
-
                 method: 'POST',
-                body: JSON.stringify(this.memo)
+                body: JSON.stringify({name:this.name, memo: this.memo})
             }
-            this.memo = await myFetch(url, options);
+            this.info = await myFetch(url, options);
+            this.name = '';
+            this.memo = '';
+            
         }
     }
   };
 </script>
+
+<style>
+.input {
+    border: solid
+}
+</style>
