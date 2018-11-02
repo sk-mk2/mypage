@@ -42,7 +42,8 @@ var getCredentialDefaultArgs = {
 };
 
 // 新しい認証情報の作成/登録
-navigator.credentials.create(createCredentialDefaultArgs)
+export default () => {
+    navigator.credentials.create(createCredentialDefaultArgs)
     .then((cred) => {
         console.log("NEW CREDENTIAL", cred);
 
@@ -62,3 +63,4 @@ navigator.credentials.create(createCredentialDefaultArgs)
     .catch((err) => {
         console.log("ERROR", err);
     });
+};

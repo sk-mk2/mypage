@@ -6,6 +6,11 @@
     </a>
     </h2>
     <a href="https://w3c.github.io/webauthn/#registering-a-new-credential">WebAuthn仕様</a>
+    <button v-on:click="webAuth" class="square_btn">Auth Test</button>
+    <p>
+    FIDOというのがそもそもの技術としてあるのでその知識も必要
+    認証器を手に入れなければ
+    </p>
     <p>
     ウェブサイトの認証にパスワードやSMSのテキストを
     利用するのではなく、公開鍵暗号を利用する。
@@ -119,6 +124,9 @@
 <script>
 import webAuth from './webAuth';
 export default {
+    methods: {
+        webAuth
+    }
     
 }
 </script>
