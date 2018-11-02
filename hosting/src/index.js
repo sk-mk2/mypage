@@ -20,9 +20,12 @@ new Vue({
         <v-toolbar-title class="title">sk-mk2の学習用ページ</v-toolbar-title>
         <v-content >
         <v-layout row>
-
+        <v-flex xs3>
         <Navigator></Navigator>
+        </v-flex>
+        <v-flex xs9>
         <router-view></router-view>
+        </v-flex>
         </v-layout>
         </v-content>
         <v-footer class="footer">
