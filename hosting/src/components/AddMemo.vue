@@ -1,7 +1,9 @@
 <template>
   <div>
-       NAME:<v-text-field v-model="name"></v-text-field>
-       MEMO:<v-textarea v-model="memo" placeholder="メモ欄" rows="4" cols="40"></v-textarea>
+       NAME
+       <v-text-field v-model="name"></v-text-field>
+       MEMO
+       <v-textarea v-model="memo" placeholder="メモ欄" rows="4" cols="40"></v-textarea>
        <button v-on:click="addMemo" class="square_btn">Add Memo</button>
        <p> {{ name }}:{{ memo }}を送ります </p>
        <p> {{ info }} </p>

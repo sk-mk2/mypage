@@ -2,8 +2,8 @@
   <div>
     <p>
       <button v-on:click="callFirebase" class="square_btn">Call Counter Function</button>
-    </p>
     count:{{ count }}
+    </p>
 
   </div>
 </template>
