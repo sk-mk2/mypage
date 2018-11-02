@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Firebase from './components/Firebase.vue';
-import WebAuth from './components/WebAuth.vue';
+import Navigator from './components/Navigator.vue';
 import router from './router';
 import Vuetify from 'vuetify';
 import "vuetify/dist/vuetify.min.css";
@@ -19,10 +18,13 @@ new Vue({
     template: `
     <v-app >
         <v-toolbar-title class="title">sk-mk2の学習用ページ</v-toolbar-title>
-        <li><router-link to="/">Go to Home</router-link></li>
-        <li><router-link to="/web-auth">Go to WebAuth</router-link></li>
-        <li><router-link to="/firebase">Go to Firebase</router-link></li>
+        <v-content >
+        <v-layout row>
+
+        <Navigator></Navigator>
         <router-view></router-view>
+        </v-layout>
+        </v-content>
         <v-footer class="footer">
             <a href="https://www.github.com/sk-mk2">
             <v-icon medium color="black">fab fa-github</v-icon>
@@ -32,7 +34,6 @@ new Vue({
     `,
     router: router,
     components: {
-        Firebase,
-        WebAuth
+        Navigator
     }
 });
