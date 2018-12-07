@@ -1,7 +1,7 @@
 <template>
   <div>
     <button v-on:click="getData" class="square_btn">Get Memo</button>
-    
+    <rotate-square2 v-if="isLoading"></rotate-square2>
     <v-data-table
         :headers="headers"
         :items="memos"
@@ -19,6 +19,7 @@
 
 <script>
   import { myFetch } from '../util.js';
+  import { RotateSquare2 }  from 'vue-loading-spinner';
 
   const baseUrl = 'https://us-central1-mypage-90953.cloudfunctions.net/api/';
   //const baseUrl = 'http://localhost:5000/mypage-90953/us-central1/api/';
@@ -26,6 +27,7 @@
     data: () => {
         return {
             memos: [],
+            isLoading: false,
             headers: [
                 {
                     text: 'Name',
@@ -42,9 +44,14 @@
     },
     methods: {
         getData: async function() {
+            this.isLoading = true;
             const url = baseUrl + 'memo';
             this.memos = JSON.parse(await myFetch(url));
+            this.isLoading = false;
         }
+    },
+    components: {
+        RotateSquare2
     }
   };
 </script>

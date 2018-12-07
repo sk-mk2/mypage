@@ -23,7 +23,7 @@ module.exports =  {
         rules: [
             {
                 test: /\.vue$/,
-                exclude: /node_modules/,
+                //exclude: /node_modules/,
                 loader: 'vue-loader',
                 options: {
                     loaders: {
@@ -55,7 +55,14 @@ module.exports =  {
                     'css-loader',
                     'sass-loader'
                 ]
-
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
     },
