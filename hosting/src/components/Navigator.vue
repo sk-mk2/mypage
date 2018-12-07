@@ -43,6 +43,7 @@ export default {
             {title: 'Home', icon: 'dashboard', path: '/'},
             {title: 'WebAuthn', icon: 'fa-certificate' ,path:'/web-auth'},
             {title: 'Firebase', icon: 'fa-fire' ,path:'/firebase'},
+            {title: 'Game', icon: 'fa-game' ,path:'/game'},
         ],
         right: null
         }
