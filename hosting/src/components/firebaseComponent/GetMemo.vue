@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import { myFetch } from '../util.js';
+  import { myFetch } from '../../util.js';
   import { RotateSquare2 }  from 'vue-loading-spinner';
 
   const baseUrl = 'https://us-central1-mypage-90953.cloudfunctions.net/api/';

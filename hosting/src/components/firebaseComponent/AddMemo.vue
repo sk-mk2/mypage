@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import { myFetch } from '../util.js';
+  import { myFetch } from '../../util.js';
 
   const baseUrl = 'https://us-central1-mypage-90953.cloudfunctions.net/api/';
   //const baseUrl = 'http://localhost:5000/mypage-90953/us-central1/api/';

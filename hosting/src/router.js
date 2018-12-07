@@ -1,7 +1,7 @@
 import VueRouter from 'vue-router';
-import Home from './components/Home.vue';
-import Firebase from './components/Firebase.vue';
-import WebAuth from './components/WebAuth.vue';
+import Home from './components/homeComponent/Home.vue';
+import Firebase from './components/firebaseComponent/Firebase.vue';
+import WebAuth from './components/webAuthComponent/WebAuth.vue';
 
 const routes = [
     {path:'/', component: Home},

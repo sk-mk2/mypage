@@ -2,7 +2,7 @@
 <div>
     <h2>WebAuthenticationAPI
     <a href="https://developer.mozilla.org/ja/docs/Web/API/Web_Authentication_API">
-    <img src="../image/mdn.png" width="30" height="30" class="low-position">
+    <img src="../../image/mdn.png" width="30" height="30" class="low-position">
     </a>
     </h2>
     <a href="https://w3c.github.io/webauthn/#registering-a-new-credential">WebAuthn仕様</a>
